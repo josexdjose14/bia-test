@@ -10,12 +10,12 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                'dark-blue': 'hsl(209, 23%, 22%)',               // Dark Mode Elements
-                'very-dark-blue-bg': 'hsl(207, 26%, 17%)',        // Dark Mode Background
-                'very-dark-blue-text': 'hsl(200, 15%, 8%)',       // Light Mode Text
-                'gray-input': 'hsl(0, 0%, 52%)',                  // Light Mode Input
-                'very-light-gray': 'hsl(0, 0%, 98%)',             // Light Mode Background
-                'pure-white': 'hsl(0, 0%, 100%)',                 // Text in Dark Mode & Elements in Light Mode
+                'dark-background': 'hsl(207, 26%, 17%)',
+                'dark-element': 'hsl(209, 23%, 22%)',
+                'dark-text': 'hsl(0, 0%, 100%)',
+                'light-background': 'hsl(0, 0%, 98%)',
+                'light-input': 'hsl(0, 0%, 52%)',
+                'light-text': 'hsl(200, 15%, 8%)',
             },
             keyframes: {
                 shimmer: {

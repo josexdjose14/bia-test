@@ -18,24 +18,22 @@ export default function HomeCard({ country }: Props) {
     };
 
     return (
-        <article className="border border-gray-300 rounded-lg shadow-sm w-full max-w-[300px] mx-2 my-2 p-4 bg-white" onClick={goToCountry}>
-            <div className="mb-3">
-                <Image
+        <article className="w-full shadow-md rounded overflow-hidden cursor-pointer transition-transform hover:scale-[1.01]" onClick={goToCountry}>
+            <div className="w-full aspect-[4/3] overflow-hidden">
+                <img
                     src={country.flags.svg}
-                    alt={`Flag of ${country.name.common}`}
-                    className="object-cover w-full rounded-md"
-                    width={300}
-                    height={150}
+                    alt={country.flags.alt || "flag"}
+                    className="object-cover w-full h-full"
                 />
             </div>
 
-            <div>
+            <div className="flex flex-col p-4">
                 <h2 className="font-extrabold text-lg mb-3">{country.name.common}</h2>
                 <p className="text-sm mb-1">
                     <span className="font-semibold">Population:</span>{" "}
-                    {country.population.toLocaleString()}
+                    {country.population}
                 </p>
-                <p className="text-sm mb-1">
+                <p className="font-semibold mb-1">
                     <span className="font-semibold">Region:</span> {country.region}
                 </p>
                 <p className="text-sm">

@@ -3,7 +3,7 @@ import { Country } from "@/app/lib/definitions";
 import axios from "axios"
 
 const BASE_URL = "https://restcountries.com/v3.1";
-const FIELDS = "?fields=name,population,region,capital,flags,subregion,languages,currencies,borders,tld";
+const FIELDS = "area,population,region,capital,flags,subregion,languages,name,currencies,borders,tld";
 
 // export async function getCountriesByRegion(region: string): Promise<Country[]> {
 //   const res = await fetch(`${BASE_URL}/region/${region}?fields=${FIELDS}`)

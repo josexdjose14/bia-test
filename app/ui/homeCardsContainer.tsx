@@ -7,7 +7,12 @@ interface Props {
 
 export default function CountriesTable({ countryListX }: Props) {
     return (
-        <section className="w-full grid gap-10 grid-cols-[repeat(auto-fit,minmax(300px,300px))] justify-center px-4 md:px-8 gap-y-12 gap-x-10">
+        <section className="grid gap-6 p-4
+  grid-cols-1 
+  sm:grid-cols-2 
+  md:grid-cols-3 
+  xl:grid-cols-4
+  max-w-screen-xl mx-auto">
             {countryListX && countryListX.length > 0 ? (
                 countryListX.map((country) => (
                     <HomeCard country={country} key={country.name.common} />

@@ -12,7 +12,7 @@ export default function Page() {
   const [countryList, setCountryList] = useState<Country[]>(defaultSearch);
 
   return (
-    <main className="container mx-auto px-4">
+    <main className="w-full flex flex-col p-4 gap-8 bg-gray-100">
       <HomeSearch countrySet={setCountryList} />
       <Suspense fallback={<CardsSkeleton />}>
         <HomeCardsContainer countryListX={countryList} />
