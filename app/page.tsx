@@ -1,22 +1,14 @@
-"use client";
-import { Suspense, useEffect, useState } from "react";
-import { Country } from "./lib/definitions";
-import { defaultSearch } from "./lib/static-data";
-import HomeSearch from "./ui/homeSearch";
-import HomeCardsContainer from "./ui/homeCardsContainer";
-import { getCountriesByName } from "./lib/api";
-import { CardsSkeleton } from "./ui/skeletons";
-import StaticHomeCardsContainer from "./ui/staticHomeCardsContainer";
+import Link from "next/link";
 
 export default function Page() {
-  const [countryList, setCountryList] = useState<Country[]>(defaultSearch);
-
-  return (
-    <main className="container mx-auto px-4">
-      <HomeSearch countrySet={setCountryList} />
-      <Suspense fallback={<CardsSkeleton />}>
-        <HomeCardsContainer countryListX={countryList} />
-      </Suspense>
-    </main>
-  );
+    return (
+        <main className="flex content-center justify-items-center">
+            <p className="font-extrabold">welcome to my test</p>
+            <Link
+                href="/dashboard"
+                className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+            > continue
+            </Link>
+        </main>
+    );
 }
