@@ -16,19 +16,19 @@ export default function Page() {
     }
 
     return (
-        <section className="h-full w-full bg-gray-100 p-4 w-full flex flex-col">
+        <section className="h-full w-full bg-gray-100 p-4 w-full flex flex-col bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text">
             {/* btn header */}
             <div className="py-4">
                 <button
                     onClick={goBack}
-                    className="w-auto flex flex-norwap gap-1 px-4 py-2 items-center rounded shadow-md cursor-pointer"
+                    className="w-auto flex flex-norwap gap-1 px-4 py-2 items-center rounded shadow-md cursor-pointer bg-dark-text dark:bg-dark-element"
                 >
                     <ArrowLeftIcon className="w-4" />
                     Back
                 </button>
             </div>
             {/* content */}
-            <div className="py-4 flex flex-col justify-between sm:flex-row items-center">
+            <div className="py-0 flex flex-col justify-between sm:flex-row items-center">
                 {/* flag */}
                 <div className="w-full sm:w-2/5 aspect-[4/3] overflow-hidden flex justify-center items-center">
                     <img
@@ -42,7 +42,7 @@ export default function Page() {
                 <div className="w-full sm:w-2/5 flex-col sm:flex-row gap-4 py-4">
                     {/* title */}
                     <div className='py-2 w-full sm:1/2'>
-                        <h3 className="font-extrabold text-light-text">{country.name.common}</h3>
+                        <h3 className="font-extrabold text-2xl">{country.name.common}</h3>
                     </div>
                     {/* medium data */}
                     <div className='py-2 flex flex-col sm:flex-row sm:items-start'>
@@ -84,7 +84,7 @@ export default function Page() {
                         </div>
                         <div className='w-full sm:w-3/5 flex flex-row flex-wrap sm:m-0'>
                             {country.borders.map((bord) => (
-                                <span key={bord} className='py-1 px-2 m-1 rounded shadow-md'>{bord}</span>
+                                <span key={bord} className='py-1 px-2 m-1 rounded shadow-md bg-dark-text dark:bg-dark-element'>{bord}</span>
                             ))}
                         </div>
                     </div>

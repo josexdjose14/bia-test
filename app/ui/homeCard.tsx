@@ -18,7 +18,7 @@ export default function HomeCard({ country }: Props) {
     };
 
     return (
-        <article className="w-full shadow-md rounded overflow-hidden cursor-pointer transition-transform hover:scale-[1.01]" onClick={goToCountry}>
+        <article className="w-full shadow-md rounded overflow-hidden cursor-pointer transition-transform hover:scale-[1.01] bg-dark-text text-light-text dark:bg-dark-element dark:text-dark-text" onClick={goToCountry}>
             <div className="w-full aspect-[4/3] overflow-hidden">
                 <img
                     src={country.flags.svg}
@@ -28,12 +28,12 @@ export default function HomeCard({ country }: Props) {
             </div>
 
             <div className="flex flex-col p-4">
-                <h2 className="font-extrabold text-lg mb-3">{country.name.common}</h2>
+                <h2 className="font-extrabold text-base mb-3">{country.name.common}</h2>
                 <p className="text-sm mb-1">
                     <span className="font-semibold">Population:</span>{" "}
                     {country.population}
                 </p>
-                <p className="font-semibold mb-1">
+                <p className="text-sm mb-1">
                     <span className="font-semibold">Region:</span> {country.region}
                 </p>
                 <p className="text-sm">

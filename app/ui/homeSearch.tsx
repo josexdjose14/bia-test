@@ -42,13 +42,13 @@ export default function HomeSearch({ countrySet }: Props) {
     }, 2000);
 
     return (
-        <section className="w-full flex flex-col sm:flex-row gap-4 sm:gap-1 justify-between py-2 pr-4">
-            <div className="flex items-center gap-2 py-2 px-4 rounded shadow-md w-full md:w-1/3">
+        <section className="w-full flex flex-col sm:flex-row gap-4 sm:gap-1 justify-between py-2 pr-4 bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text">
+            <div className="flex items-center gap-2 py-2 px-4 rounded shadow-md w-full md:w-1/3 bg-dark-text dark:bg-dark-element">
                 <MagnifyingGlassIcon width={24} height={24} />
-                <input type="text" onChange={(e) => updateCountriesByName(e.target.value)} className="focus:outline-none focus:ring-0 focus:border-transparent" />
+                <input type="text" placeholder="Search for a country..." onChange={(e) => updateCountriesByName(e.target.value)} className="focus:outline-none focus:ring-0 focus:border-transparent placeholder-light-input" />
             </div>
 
-            <select name="region" id="region" onChange={(e) => updateCountriesByRegion(e.target.value)} className="py-2 px-4 rounded shadow-md w-54 focus:outline-none focus:ring-0 focus:border-transparent">
+            <select name="region" id="region" onChange={(e) => updateCountriesByRegion(e.target.value)} className="py-2 px-4 rounded shadow-md w-54 focus:outline-none focus:ring-0 focus:border-transparent bg-dark-text dark:bg-dark-element">
                 <option value="">
                     Filter by region
                 </option>

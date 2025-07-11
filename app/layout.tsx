@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito_sans.className} antialiased`}
+        className={`${nunito_sans.className} antialiased bg-light-background dark:bg-dark-background`}
       >
         <HomeHeader />
         {children}

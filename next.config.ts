@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'flagcdn.com',
-        pathname: '/**', // permite cualquier imagen del dominio
+        pathname: '/**',
       },
       {
         protocol: 'https',
